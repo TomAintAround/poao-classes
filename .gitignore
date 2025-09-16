@@ -1,5 +1,6 @@
 .direnv
 .envrc
+.idea
 
 # Compiled class file
 *.class
