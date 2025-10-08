@@ -1,3 +1,6 @@
+// Folha 1
+// Exercício 6
+
 import java.util.Scanner;
 
 public class Combinations {

@@ -1,3 +1,6 @@
+// Folha 1
+// Exercício 2
+
 import java.util.Scanner;
 
 public class BinToDec {

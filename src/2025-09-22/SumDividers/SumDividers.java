@@ -1,3 +1,6 @@
+// Folha 1
+// Exercício 5
+
 import java.util.Scanner;
 
 public class SumDividers {
