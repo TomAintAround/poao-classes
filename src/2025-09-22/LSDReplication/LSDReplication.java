@@ -9,11 +9,16 @@ public class LSDReplication {
 		Scanner scanner = new Scanner(System.in);
 		int digitsNum = scanner.nextInt();
 
-		int limit = (int) Math.pow(10, digitsNum);
-		for (int i = 2; i < limit; i++) {
-			int squared = (int) Math.pow(i, 2);
-			if (squared % limit == i)
-				System.out.printf("Possui: %d (%dx%d = %d)\n", i, i, i, squared);
+		for (int digits = 1; digits <= digitsNum; digits++) {
+			long upperLimit = (long) Math.pow(10, digits);
+			long lowerLimit = (long) Math.pow(10, digits - 1);
+			if (lowerLimit == 1)
+				lowerLimit = 2;
+			for (long num = lowerLimit; num < upperLimit; num++) {
+				long squared = num * num;
+				if (squared % upperLimit == num)
+					System.out.printf("Possui: %d (%dx%d = %d)\n", num, num, num, squared);
+			}
 		}
 
 		scanner.close();
