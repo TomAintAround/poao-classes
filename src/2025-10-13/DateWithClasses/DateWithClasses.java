@@ -1,11 +1,31 @@
 // Folha 4.1
 // Exercício 1
 
+/**
+ * Date class
+ */
 class Date {
+	/**
+	 * Day
+	 */
 	private int day;
+	/**
+	 * Month
+	 */
 	private int month;
+	/**
+	 * Year
+	 */
 	private int year;
 
+	/**
+	 * Checks the validity of the date
+	 *
+	 * @param day   Day
+	 * @param month Month
+	 * @param year  Year
+	 * @return validity
+	 */
 	private boolean dateIsValid(int day, int month, int year) {
 		if (day < 1)
 			return false;
@@ -28,6 +48,13 @@ class Date {
 		return true;
 	}
 
+	/**
+	 * Date class constructor
+	 *
+	 * @param day   Day
+	 * @param month Month
+	 * @param year  Year
+	 */
 	public Date(int day, int month, int year) {
 		assert (dateIsValid(day, month, year));
 		this.day = day;
@@ -35,6 +62,11 @@ class Date {
 		this.year = year;
 	}
 
+	/**
+	 * Transforms Date class to a String
+	 *
+	 * @return String of the Date class
+	 */
 	public String toString() {
 		String[] months = {
 				"janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro",
@@ -45,6 +77,14 @@ class Date {
 		return string;
 	}
 
+	/**
+	 * Compares 2 dates
+	 *
+	 * @param date Date
+	 * @return -1 if the first date comes first,
+	 *         0 if they are the same date,
+	 *         1 if the first date comes last
+	 */
 	public int compareTo(Date date) {
 		if (this.year > date.year)
 			return 1;
